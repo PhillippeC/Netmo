@@ -1,0 +1,15 @@
+<h2 class="p-3">Films</h2>
+
+<div *ngFor="let genre of filmsByGenre">
+  <h3 class="ml-3"><a [routerLink]="['/categorie', genre.id]">{{genre.name}}</a></h3>
+  <div class="d-flex pl-3 pr-3 pb-3">
+    <div class="row">
+      <div class="col-md-2 p-3" *ngFor="let film of genre.films">
+        <div class="movie_cover" [routerLink]="['/moviedetails', film.id]">
+          <img src="https://image.tmdb.org/t/p/w300{{film.backdrop_path}}" width="100%">
+          <span class="overlay-text">{{film.title}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

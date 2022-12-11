@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row" style="margin-top:20px;">
+      <div class="col-sm-6">
+        <img [src]="imageSrc" class="img-fluid detail">
+      </div>
+      <div class="col-sm-6 my-auto">
+          <div class="retour" (click)="back()"><i class="bi bi-chevron-left mr-1"></i><a>Retour</a></div>
+          <h1>{{person.name}}</h1>
+          <p class="overview">{{person.biography}}</p>
+          <p *ngIf="person.birthday">Date de naissance : {{person.birthday}}</p>
+
+          <div class="container">
+            <h3 class="p-3" style="padding-left: 0px!important;" *ngIf="person.known_for.length > 0">Connu pour</h3>
+            <div class="row">
+              <div class="col-4 movie" *ngFor="let film of person.known_for.slice(0,3)" [routerLink]="['/moviedetails', film.id]">
+                <img width="100%" src="https://image.tmdb.org/t/p/w342{{film.poster_path}}">
+                <span class="overlay-text">{{film.title}}</span>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+</div>

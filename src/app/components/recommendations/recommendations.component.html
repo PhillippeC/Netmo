@@ -1,0 +1,12 @@
+<h2 class="p-3" style="margin-top: 50px;">Recommandations basées sur ce film</h2>
+
+<div class="d-flex p-3">
+  <div class="row">
+    <div class="col-md p-3" *ngFor="let film of films">
+      <div class="movie_cover" [routerLink]="['/moviedetails', film.id]">
+        <img src="https://image.tmdb.org/t/p/w300{{film.backdrop_path}}" width="100%">
+        <span class="overlay-text">{{film.title}}</span>
+      </div>
+    </div>
+  </div>
+</div>

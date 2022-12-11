@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row" style="margin-top:20px;">
+      <div class="col-sm-6">
+        <img [src]="imageSrc" class="img-fluid detail">
+      </div>
+      <div class="col-sm-6 my-auto">
+          <h5><span *ngFor="let genre of film.genres; let isLast=last"><a [routerLink]="['/categorie', genre.id]">{{genre.name}}</a>{{isLast ? '' : ' - '}}</span></h5>
+          <h1>{{film.title}}</h1>
+          <h2>{{film.vote_average * 10}}%</h2>
+          <h5>Date sortie : {{releaseDate}}</h5>
+          <p class="film_overview">{{film.overview}}</p>
+          <a *ngIf="trailerVideoID" target="_blank" href="{{trailerVideoID}}">Trailer</a>
+          
+          <div class="container">
+            <h3 class="p-3" style="padding-left: 0px!important;">Têtes d'affiche</h3>
+            <div class="row">
+              <div class="col-4 cast" *ngFor="let cast of casts" [routerLink]="['/actorinfo', cast.credit_id]">
+                <img width="100%" src="https://image.tmdb.org/t/p/w200{{cast.profile_path}}">
+                <span class="overlay-text">{{cast.name}}</span>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <hr />
+  <app-recommendations></app-recommendations>

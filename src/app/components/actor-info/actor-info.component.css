@@ -1,0 +1,24 @@
+.movie{
+    position: relative;
+    cursor: pointer;
+}
+.overlay-text{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    bottom: 5px;
+    left: 20px;
+    right: 20px;
+    font-size: large;
+}
+.overview
+{
+    margin-top:20px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.retour
+{
+    cursor: pointer;
+    margin-bottom: 50px;
+}

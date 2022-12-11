@@ -1,0 +1,15 @@
+.movie_cover{
+    position: relative;
+    cursor: pointer;
+  }
+.overlay-text{
+    position: absolute;
+    color: white;
+    mix-blend-mode: exclusion;
+    font-weight: 700;
+    bottom: 5px;
+    left: 10px;
+}
+a {
+  color: inherit;
+}

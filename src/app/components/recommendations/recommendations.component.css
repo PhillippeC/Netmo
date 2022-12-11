@@ -1,0 +1,11 @@
+.movie_cover{
+    position: relative;
+    cursor: pointer
+  }
+.overlay-text{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    bottom: 5px;
+    left: 10px;
+}
